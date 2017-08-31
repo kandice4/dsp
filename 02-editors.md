@@ -81,7 +81,7 @@ Upload these 3 files to the [`editors`](editors/) folder.
 
 What terminal editor will be your preferred choice of use? How did you make your decision?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> I will probably use vim. I like the display and the frustration of the toggle between command and edit actually made it easier for me to remember the keystrokes.
 
 --
 
@@ -89,6 +89,6 @@ What terminal editor will be your preferred choice of use? How did you make your
 
 What graphical editor will you use? How did you make your decision? What are some interesting features of your editor? What are some useful keyboard shortcuts for your editor? How do you customize your editor?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Probably gvim. Should be easier to keep both terminal and graphical the same. I like that the editor toggles between the text edit mode and the insert text mode. The shortcut/command "i" allows you to insert text while "a" allows you to append. In command mode, "dd" deletes a line and "x" deletes a character. Editing the vimrc file will allow customization.
 
  
