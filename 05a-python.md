@@ -12,7 +12,7 @@ For quick and easy interactive practice with Python, many people enjoy [Codecade
 
 How are Python lists and tuples similar and different? Which will work as keys in dictionaries? Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Both are containers for elements like strings, integers, floats. Tuples are immutable while lists are mutable. This means that you cannot change tuples. Tuples are used in dictionaries. Lists cannot be used in dictionaries. As stated before, lists are mutable.
 
 ---
 
@@ -20,7 +20,7 @@ How are Python lists and tuples similar and different? Which will work as keys i
 
 How are Python lists and sets similar and different? Give examples of using both. How does performance compare between lists and sets for finding an element. Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Both are a collection of elements. Lists are ordered but sets are not. Sets cannot have duplicate elements. I might create a list to hold the values for number of streams per day by day of the week. Each element would be indexed and each index would map to a day of the week. Sets are more typical for membership testing or to remove duplicate values. Both can use `in` to check if element exists in the list/set. List can use index to find the position of the element but since sets are unordered we can't determine an index.
 
 ---
 
@@ -28,7 +28,9 @@ How are Python lists and sets similar and different? Give examples of using both
 
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Lambda is used for creating anonymous functions. They are used to return the result of an expression without having to program a separate function. One example is to use lambda within the first argument of the filter() function to check for a condition. For example: filter(lambda x: x%2==0, my_list) will return only elements of my_list that are divisible by 2 (even).
+
+The key argument requires a function. It is helpful to use lambda for arguments that require a function. This works similarly to the use in filter because the function is called for each list element. Lambda can be used to sort by index for complex objects. For example: sorted(tuples_list, key=lambda tuple: tuple[1]) will sort a list of tuples by the 2nd element in the tuple. For user data, this could be a DOB, age, name, zip code, etc.
 
 ---
 
