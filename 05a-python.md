@@ -62,7 +62,7 @@ date_stop = '07-28-2015'
 >>    from datetime import datetime
 >>    date_format = '%m-%d-%Y'
 >>    a = datetime.strptime(date_start,date_format)
->>    b = datetime.strptime(date.stop, date_format)
+>>    b = datetime.strptime(date_stop, date_format)
 >>    c = b - a
 >>    days_between = c.days
 >>    ```
@@ -80,7 +80,7 @@ date_stop = '05282015'
 >>    from datetime import datetime
 >>    date_format = '%m%d%Y'
 >>    a = datetime.strptime(date_start,date_format)
->>    b = datetime.strptime(date.stop, date_format)
+>>    b = datetime.strptime(date_stop, date_format)
 >>    c = b - a
 >>    days_between = c.days
 >>    ```
@@ -98,7 +98,7 @@ date_stop = '14-Jul-2015'
 >>    from datetime import datetime
 >>    date_format = '%d-%b-%Y'
 >>    a = datetime.strptime(date_start,date_format)
->>    b = datetime.strptime(date.stop, date_format)
+>>    b = datetime.strptime(date_stop, date_format)
 >>    c = b - a
 >>    days_between = c.days
 >>    ```
