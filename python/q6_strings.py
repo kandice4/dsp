@@ -18,8 +18,11 @@ def donuts(count):
     >>> donuts(99)
     'Number of donuts: many'
     """
-    raise NotImplementedError
-
+    if count >= 10:
+        how_many = "many"
+    else:
+        how_many = str(count)
+    return "Number of donuts: " + how_many
 
 def both_ends(s):
     """
@@ -37,7 +40,10 @@ def both_ends(s):
     >>> both_ends('xyz')
     'xyyz'
     """
-    raise NotImplementedError
+    if len(s) < 2:
+        return ""
+    else:
+        return s[:2] + s[len(s)-2:]
 
 
 def fix_start(s):
@@ -56,7 +62,13 @@ def fix_start(s):
     >>> fix_start('donut')
     'donut'
     """
-    raise NotImplementedError
+    result = ""
+    for c in s:
+        if c == s[0]:
+            result += "*"
+        else:
+            result += c
+    return s[0] + result[1:]
 
 
 def mix_up(a, b):
@@ -74,7 +86,7 @@ def mix_up(a, b):
     >>> mix_up('pezzy', 'firm')
     'fizzy perm'
     """
-    raise NotImplementedError
+    return b[:2] + a[2:] + " " + a[:2] + b[2:]
 
 
 def verbing(s):
@@ -91,7 +103,13 @@ def verbing(s):
     >>> verbing('do')
     'do'
     """
-    raise NotImplementedError
+    if len(s) < 3:
+        result = s
+    elif s[len(s)-3:] == "ing":
+        result = s + "ly"
+    else:
+        result = s + "ing"
+    return result
 
 
 def not_bad(s):
@@ -111,8 +129,13 @@ def not_bad(s):
     >>> not_bad("It's bad yet not")
     "It's bad yet not"
     """
-    raise NotImplementedError
-
+    find_not = s.find("not")
+    find_bad = s.find("bad")
+    if find_not == -1 or find_bad == -1 or find_not > find_bad:
+        result = s
+    else:
+        result = s[:find_not] + "good" + s[find_bad +3:]
+    return result
 
 def front_back(a, b):
     """
@@ -130,4 +153,21 @@ def front_back(a, b):
     >>> front_back('Kitten', 'Donut')
     'KitDontenut'
     """
-    raise NotImplementedError
+    a_even_split = int(len(a)/2)
+    a_odd_split = int((len(a)+1)/2)
+    b_even_split = int(len(b)/2)
+    b_odd_split = int((len(b)+1)/2)    
+    
+    if len(a) % 2 == 0:
+        a_front = a[:a_even_split]
+        a_back = a[a_even_split:]
+    else:
+        a_front = a[:a_odd_split]
+        a_back = a[a_odd_split:]
+    if len(b) % 2 == 0:
+        b_front = b[:b_even_split]
+        b_back = b[b_even_split:]
+    else:
+        b_front = b[:b_odd_split]
+        b_back = b[b_odd_split:]
+    return a_front + b_front + a_back + b_back
