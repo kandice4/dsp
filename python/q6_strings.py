@@ -62,13 +62,13 @@ def fix_start(s):
     >>> fix_start('donut')
     'donut'
     """
-    result = ""
-    for c in s:
+    result = s[0]
+    for c in s[1:]:
         if c == s[0]:
             result += "*"
         else:
             result += c
-    return s[0] + result[1:]
+    return result
 
 
 def mix_up(a, b):
